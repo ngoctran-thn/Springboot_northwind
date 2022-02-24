@@ -78,7 +78,7 @@ public class Order {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tax_status_id")
-    private OrdersTaxStatus ordersTaxStatus;
+    private OrderTaxStatus ordersTaxStatus;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_id")
@@ -125,11 +125,11 @@ public class Order {
         this.ordersStatus = ordersStatus;
     }
 
-    public OrdersTaxStatus getOrdersTaxStatus() {
+    public OrderTaxStatus getOrdersTaxStatus() {
         return ordersTaxStatus;
     }
 
-    public void setOrdersTaxStatus(OrdersTaxStatus ordersTaxStatus) {
+    public void setOrdersTaxStatus(OrderTaxStatus ordersTaxStatus) {
         this.ordersTaxStatus = ordersTaxStatus;
     }
 

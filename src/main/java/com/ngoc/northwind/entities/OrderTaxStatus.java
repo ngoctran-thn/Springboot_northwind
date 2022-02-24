@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "orders_tax_status")
-public class OrdersTaxStatus {
+public class OrderTaxStatus {
     @Id
     @Column(name = "id", nullable = false)
     private Boolean id = false;
