@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "order_details_status")
-public class OrderDetailsStatus {
+public class OrderDetailStatus {
     @Id
     @Column(name = "id", nullable = false)
     private Integer id;

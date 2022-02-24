@@ -37,7 +37,7 @@ public class OrderDetail {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_id")
-    private OrderDetailsStatus orderDetailsStatus;
+    private OrderDetailStatus orderDetailsStatus;
 
     @Column(name = "date_allocated")
     private Instant dateAllocated;
@@ -72,11 +72,11 @@ public class OrderDetail {
         this.dateAllocated = dateAllocated;
     }
 
-    public OrderDetailsStatus getOrderDetailsStatus() {
+    public OrderDetailStatus getOrderDetailsStatus() {
         return orderDetailsStatus;
     }
 
-    public void setOrderDetailsStatus(OrderDetailsStatus orderDetailsStatus) {
+    public void setOrderDetailsStatus(OrderDetailStatus orderDetailsStatus) {
         this.orderDetailsStatus = orderDetailsStatus;
     }
 
