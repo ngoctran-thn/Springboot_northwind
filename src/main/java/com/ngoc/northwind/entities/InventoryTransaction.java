@@ -2,8 +2,6 @@ package com.ngoc.northwind.entities;
 
 import javax.persistence.*;
 import java.time.Instant;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "inventory_transactions", indexes = {
@@ -45,17 +43,6 @@ public class InventoryTransaction {
 
     @Column(name = "comments")
     private String comments;
-
-    @OneToMany(mappedBy = "inventory")
-    private Set<PurchaseOrderDetail> purchaseOrderDetails = new LinkedHashSet<>();
-
-    public Set<PurchaseOrderDetail> getPurchaseOrderDetails() {
-        return purchaseOrderDetails;
-    }
-
-    public void setPurchaseOrderDetails(Set<PurchaseOrderDetail> purchaseOrderDetails) {
-        this.purchaseOrderDetails = purchaseOrderDetails;
-    }
 
     public String getComments() {
         return comments;

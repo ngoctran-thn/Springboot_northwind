@@ -73,7 +73,7 @@ public class Employee {
     @Column(name = "attachments")
     private byte[] attachments;
 
-    @OneToMany(mappedBy = "createdBy")
+    @OneToMany(mappedBy = "employees")
     private Set<PurchaseOrder> purchaseOrders = new LinkedHashSet<>();
 
     @ManyToMany
