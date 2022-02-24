@@ -59,7 +59,7 @@ public class Product {
     @OneToMany(mappedBy = "products")
     private Set<InventoryTransaction> inventoryTransactions = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "products")
     private Set<OrderDetail> orderDetails = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "products")

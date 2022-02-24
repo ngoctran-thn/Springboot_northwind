@@ -84,13 +84,13 @@ public class Order {
     @JoinColumn(name = "status_id")
     private OrdersStatus ordersStatus;
 
-    @OneToMany(mappedBy = "customerOrder")
+    @OneToMany(mappedBy = "orders")
     private Set<InventoryTransaction> inventoryTransactions = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "orders")
     private Set<OrderDetail> orderDetails = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "orders")
     private Set<Invoice> invoices = new LinkedHashSet<>();
 
     public Set<Invoice> getInvoices() {

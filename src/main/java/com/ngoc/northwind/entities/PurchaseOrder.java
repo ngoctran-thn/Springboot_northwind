@@ -67,10 +67,10 @@ public class PurchaseOrder {
     @Column(name = "submitted_by")
     private Integer submittedBy;
 
-    @OneToMany(mappedBy = "purchaseOrder")
+    @OneToMany(mappedBy = "purchaseOrders")
     private Set<InventoryTransaction> inventoryTransactions = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "purchaseOrder")
+    @OneToMany(mappedBy = "purchaseOrders")
     private Set<PurchaseOrderDetail> purchaseOrderDetails = new LinkedHashSet<>();
 
     public Set<PurchaseOrderDetail> getPurchaseOrderDetails() {
