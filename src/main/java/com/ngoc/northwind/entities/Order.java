@@ -82,7 +82,7 @@ public class Order {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_id")
-    private OrdersStatus ordersStatus;
+    private OrderStatus ordersStatus;
 
     @OneToMany(mappedBy = "orders")
     private Set<InventoryTransaction> inventoryTransactions = new LinkedHashSet<>();
@@ -117,11 +117,11 @@ public class Order {
         this.inventoryTransactions = inventoryTransactions;
     }
 
-    public OrdersStatus getOrdersStatus() {
+    public OrderStatus getOrdersStatus() {
         return ordersStatus;
     }
 
-    public void setOrdersStatus(OrdersStatus ordersStatus) {
+    public void setOrdersStatus(OrderStatus ordersStatus) {
         this.ordersStatus = ordersStatus;
     }
 

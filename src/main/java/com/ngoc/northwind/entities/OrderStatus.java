@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "orders_status")
-public class OrdersStatus {
+public class OrderStatus {
     @Id
     @Column(name = "id", nullable = false)
     private Boolean id = false;
