@@ -1,41 +1,41 @@
 package com.ngoc.northwind.controllers;
 
-import com.ngoc.northwind.entities.Invoice;
-import com.ngoc.northwind.repositories.InvoiceRepository;
+import com.ngoc.northwind.entities.Employee;
+import com.ngoc.northwind.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
 @RestController
-public class InvoiceController {
+public class EmployeeController {
 
     @Autowired
-    private InvoiceRepository invoiceRepository;
+    private EmployeeRepository employeeRepository;
 
-    @GetMapping("/invoices")
-    public Iterable<Invoice> getInvoices(){
-        return invoiceRepository.findAll();
+    @GetMapping("/employees")
+    public Iterable<Employee> getEmployees(){
+        return employeeRepository.findAll();
     }
 
 
-    @GetMapping("/invoice/{id}")
-    public Optional<Invoice> getInvoice(@PathVariable("id") int id){
-        return invoiceRepository.findById(id);
+    @GetMapping("/employee/{id}")
+    public Optional<Employee> getEmployee(@PathVariable("id") int id){
+        return employeeRepository.findById(id);
     }
 
-    @PostMapping("/invoice")
-    public Invoice save(@RequestBody Invoice invoice){
-        return invoiceRepository.save(invoice);
+    @PostMapping("/employee")
+    public Employee save(@RequestBody Employee employee){
+        return employeeRepository.save(employee);
     }
 
-    @PutMapping("/invoice")
-    public Invoice update(@RequestBody Invoice invoice){
-        return invoiceRepository.save(invoice);
+    @PutMapping("/employee")
+    public Employee update(@RequestBody Employee employee){
+        return employeeRepository.save(employee);
     }
 
-    @DeleteMapping("/invoice")
-    public void delete(@RequestBody Invoice invoice){
-        invoiceRepository.delete(invoice);
+    @DeleteMapping("/employee")
+    public void delete(@RequestBody Employee employee){
+        employeeRepository.delete(employee);
     }
 }
