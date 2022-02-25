@@ -9,7 +9,7 @@ import java.util.Set;
 public class InventoryTransactionType {
     @Id
     @Column(name = "id", nullable = false)
-    private Boolean id = false;
+    private Integer id;
 
     @Column(name = "type_name", nullable = false, length = 50)
     private String typeName;
@@ -33,11 +33,11 @@ public class InventoryTransactionType {
         this.typeName = typeName;
     }
 
-    public Boolean getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Boolean id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }

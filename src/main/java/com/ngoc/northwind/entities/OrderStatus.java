@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class OrderStatus {
     @Id
     @Column(name = "id", nullable = false)
-    private Boolean id = false;
+    private Integer id;
 
     @Column(name = "status_name", nullable = false, length = 50)
     private String statusName;
@@ -23,11 +23,11 @@ public class OrderStatus {
         this.statusName = statusName;
     }
 
-    public Boolean getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Boolean id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }

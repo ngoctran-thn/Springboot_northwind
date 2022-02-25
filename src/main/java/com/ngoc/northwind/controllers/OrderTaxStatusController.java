@@ -14,11 +14,10 @@ public class OrderTaxStatusController {
     @Autowired
     private OrderTaxStatusRepository orderTaxStatusRepository;
 
-    @GetMapping("/orderTaxStatuss")
-    public Iterable<OrderTaxStatus> getOrderTaxStatuss(){
+    @GetMapping("/orderTaxStatuses")
+    public Iterable<OrderTaxStatus> getOrderTaxStatuses(){
         return orderTaxStatusRepository.findAll();
     }
-
 
     @GetMapping("/orderTaxStatus/{id}")
     public Optional<OrderTaxStatus> getOrderTaxStatus(@PathVariable("id") int id){

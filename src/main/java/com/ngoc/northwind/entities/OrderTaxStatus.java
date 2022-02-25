@@ -9,7 +9,7 @@ import java.util.Set;
 public class OrderTaxStatus {
     @Id
     @Column(name = "id", nullable = false)
-    private Boolean id = false;
+    private Integer id;
 
     @Column(name = "tax_status_name", nullable = false, length = 50)
     private String taxStatusName;
@@ -33,11 +33,11 @@ public class OrderTaxStatus {
         this.taxStatusName = taxStatusName;
     }
 
-    public Boolean getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Boolean id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }
