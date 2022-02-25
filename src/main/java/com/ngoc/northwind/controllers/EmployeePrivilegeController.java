@@ -1,6 +1,7 @@
 package com.ngoc.northwind.controllers;
 
 import com.ngoc.northwind.entities.EmployeePrivilege;
+import com.ngoc.northwind.entities.EmployeePrivilegeId;
 import com.ngoc.northwind.repositories.EmployeePrivilegeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,9 +20,10 @@ public class EmployeePrivilegeController {
     }
 
 
-    @GetMapping("/employeePrivilege/{id}")
-    public Optional<EmployeePrivilege> getEmployeePrivilege(@PathVariable("id") int id){
-        return employeePrivilegeRepository.findById(id);
+    @GetMapping("/employeePrivilege/{employee-id}/{privilege-id}")
+    public Optional<EmployeePrivilege> getEmployeePrivilege(@PathVariable("employee-id") int eId, @PathVariable("privilege-id") int pId){
+        EmployeePrivilegeId epId = new EmployeePrivilegeId(eId, pId);
+        return employeePrivilegeRepository.findById(epId);
     }
 
     @PostMapping("/employeePrivilege")

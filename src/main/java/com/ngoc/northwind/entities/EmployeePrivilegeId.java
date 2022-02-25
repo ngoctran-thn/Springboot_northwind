@@ -16,6 +16,14 @@ public class EmployeePrivilegeId implements Serializable {
     @Column(name = "privilege_id", nullable = false)
     private Integer privilegeId;
 
+    public EmployeePrivilegeId() {
+    }
+
+    public EmployeePrivilegeId(Integer employeeId, Integer privilegeId) {
+        this.employeeId = employeeId;
+        this.privilegeId = privilegeId;
+    }
+
     public Integer getPrivilegeId() {
         return privilegeId;
     }
