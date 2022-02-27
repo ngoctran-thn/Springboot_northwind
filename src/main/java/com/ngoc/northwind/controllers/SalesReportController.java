@@ -20,7 +20,7 @@ public class SalesReportController {
 
 
     @GetMapping("/salesReport/{id}")
-    public Optional<SalesReport> getSalesReport(@PathVariable("id") int id){
+    public Optional<SalesReport> getSalesReport(@PathVariable("id") String id){
         return salesReportRepository.findById(id);
     }
 
